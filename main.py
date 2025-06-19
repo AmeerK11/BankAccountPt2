@@ -3,8 +3,8 @@ class BankAccount:
 
     def __init__(self, customer_name, curr_balance, min_balance):
         self.customer_name = customer_name
-        self.current_balance = curr_balance
-        self.min_bal = min_balance
+        self.curr_balance = curr_balance
+        self.min_balance = min_balance
 
     def deposit(self, amount):
         if amount > 0:
