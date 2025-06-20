@@ -14,6 +14,7 @@ def main():
 
     print(chk.print_cust_info())
     chk.withdraw(25.0)
+    print(chk.print_cust_info())
 
 
 if __name__ == "__main__":
