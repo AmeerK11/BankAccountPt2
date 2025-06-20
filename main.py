@@ -6,13 +6,14 @@ def main():
     sav = Savings("Teej", "234", "1245", 1000.0, 100.0, .08)
     chk = Checking("Teej", "1234", "4567", 100.0, -50.0, 50)
 
-    print("Initial Savings Balance: ", sav.print_cust_info())
+    print(sav.print_cust_info())
     sav.incr()
-    print("After Interest:", sav.print_cust_info())
 
-    print("Initial Checkings Balance: ", chk.print_cust_info())
+    print(chk.print_cust_info())
     chk.withdraw(75.0) # Should throw error as this is over the limit
-    print("\nAfter Withdraw Checkings Balance: ", chk.print_cust_info())
+
+    print(chk.print_cust_info())
+    chk.withdraw(25.0)
 
 
 if __name__ == "__main__":
