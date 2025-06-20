@@ -16,3 +16,9 @@ class Checking(BankAccount):
         return super().withdraw(amount)
     def deposit(self, amount):
         return super().deposit(amount)
+    def transfer(self, amount, account_num, routing_num):
+        if amount <= self.LIMIT and amount > 0:
+            print(f"Sending {amount} to account: {account_num}, routing: {routing_num}")
+            return super().withdraw(amount)
+        else:
+            print("Cannot transfer, invalid request")
