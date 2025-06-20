@@ -1,18 +1,19 @@
 from bank_account import BankAccount
 
 class Savings(BankAccount):
-    def __init__(self, acct, routing, balance, rate):
-        super().__init__(acct, routing, balance)
+    def __init__(self, customer_name, account_num, routing_num, current_balance, min_balance, rate):
+        super().__init__(customer_name, account_num, routing_num, current_balance, min_balance)
         self.rate = rate
 
     def incr(self):
-        self.deposit(self.balance * self.rate)
+        intr = self.current_balance * self.rate
+        self.deposit(intr)
 class Checking(BankAccount):
-    def __init__(self, acct, routing, balance, LIMIT):
-        super.__init__(acct, routing, balance)
+    def __init__(self, account_num, routing_num, curr_balance, LIMIT):
+        super.__init__(account_num, routing_num, curr_balance)
         self.LIMIT = LIMIT
     def withdraw(self, amount):
-        if amount <= self.current_balance + self.LIMIT:
-            self.current_balance -= amount
+        if amount <= self.current_curr_balance + self.LIMIT:
+            self.current_curr_balance -= amount
         else:
             print("Overdraft limit exceeded")
