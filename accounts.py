@@ -13,7 +13,6 @@ class Checking(BankAccount):
         super().__init__(customer_name, current_balance, min_balance, account_num, routing_num)
         self.LIMIT = LIMIT
     def withdraw(self, amount):
-        if amount <= self.LIMIT:
-            self.current_balance -= amount
-        else:
-            print("Overdraft limit exceeded")
+        return super().withdraw(amount)
+    def deposit(self, amount):
+        return super().deposit(amount)
