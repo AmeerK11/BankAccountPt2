@@ -8,6 +8,10 @@ class Savings(BankAccount):
     def incr(self):
         intr = self.current_balance * self.rate
         self.deposit(intr)
+    def deposit(self, amount):
+        return super().deposit(amount)
+    def withdraw(self, amount):
+        return super().withdraw(amount)
 class Checking(BankAccount):
     def __init__(self, customer_name, account_num, routing_num, current_balance, min_balance, LIMIT):
         super().__init__(customer_name, current_balance, min_balance, account_num, routing_num)
