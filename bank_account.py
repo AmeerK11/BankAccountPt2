@@ -30,4 +30,4 @@ class BankAccount:
         print(f"Current Balance: ${self.current_balance}")
         print(f"Minimum Required Balance: ${self.min_bal}")
         print(f"Account Number (protected): {self._account_number}")
-        print(f"Routing Number (private): {self._BankAccount__routing_number}")
+        print(f"Routing Number (private): {self.__routing_number}")

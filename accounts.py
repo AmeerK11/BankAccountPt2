@@ -1,4 +1,4 @@
-from main import BankAccount
+from bank_account import BankAccount
 
 class Savings(BankAccount):
     def __init__(self, acct, routing, balance, rate):
