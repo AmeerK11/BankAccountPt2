@@ -8,10 +8,10 @@ class Checkings(BankAccount):
 
     def deposit(self, amount):
         if (amount > self.__transfer_limit):
-             print(f"Deposit failed. ${amount} over ${self.__transfer_limit}.")
-        if amount > 0:
-            self.curr_balance += amount
-            print(f"Desposited ${amount}. New balance: ${self.curr_balance}")
+             print(f"Deposit failed. ${amount} is over the transfer limit of ${self.__transfer_limit}.")
+        elif amount > 0:
+            self._curr_balance += amount
+            print(f"Deposited ${amount}. New balance: ${self._curr_balance}")
         else:
             print("Deposit amount must be positive")
 
